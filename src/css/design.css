@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+.c_blue {
+    color:dodgerblue;
+}
+
+.content h2 {
+    font-size:30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contentInner {
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.contentInner .items h3 {
+    font-size:20px;
+    margin-bottom: 25px;
+}
+
+.contentInner .items {
+    border-radius: 20px;
+}
+.contentInner .items.item4 {
+    background: none;
+    padding:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap:wrap;
+    gap: 20px;
+}
+
+.contentInner .items .eachItem {
+    background: #33373E;
+    padding:40px 30px;
+    border-radius: 20px;
+}
+.contentInner .items .eachItem .item {
+    overflow: auto;
+}
+
+.contentInner .items.item4 .eachItem .item {
+    height:270px;
+}
+
+.contentInner .items.item4 .eachItem {
+    width:calc(50% - 10px);
+}
+
+.item.tables {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.tableCommon {
+    width: 100%;
+    border: 1px solid #666;
+    border-top: 4px solid #000;
+}
+.tableCommon table {
+    width: 100%;
+    text-align: center;
+}
+.tableCommon th {
+    font-weight: bold;
+    background: #20232A;
+}
+.tableCommon td {
+    font-weight: 300;
+}
+.tableCommon th,
+.tableCommon td {
+    border-bottom:1px solid #666;
+    padding:15px 5px;
+}
+
+.item.lists {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background: #262B33;
+    padding:0 50px;
+    border-radius: 10px;
+}
+.listCommon {
+    width: 100%;
+}
+.listCommon h4 {
+    font-size:20px;
+    margin-bottom: 10px;
+}
+.listCommon li {
+    padding:5px 10px;
+    font-size:17px;
+    font-weight: 300;
+}
+.listCommon li span {
+    font-size:17px;
+}
+
+.tabBtn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #262B33;
+    border-radius: 10px 10px 0 0;
+}
+.tabBtn button {
+    min-width:100px;
+    height:60px;
+    padding:0 20px;
+    color:#fff;
+    font-size:17px;
+}
+.tabBtn button.active,
+.tabBtn button:hover {
+    background: #33373E;
+}
+
+.eachItem.addTab {
+    padding:0 0 30px !important;
+    overflow: hidden;
+}
+.tabContent {
+    padding:0 30px;
+}
+
+.listCommon.type2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:40px 0;
+}
+.listCommon.type2 li {
+    margin:10px 0;
+}
+.listCommon.type2 li span:nth-child(1) {
+    display: inline-block;
+    min-width:180px;
+    margin-right: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.listCommon.type2 li span:nth-child(1):after {
+    content:':';
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.listCommon.type2 li span:nth-child(2) {
+    color:#F7931A;
+}
+
+@media screen and (max-width:768px) {
+    .content h2 {
+        font-size:20px;
+    }
+    .contentInner .items.item4 {
+        display: block;
+    }
+    .contentInner .items.item4 .eachItem {
+        width: 100%;
+        padding:30px 20px;
+        margin-bottom: 20px;
+    }
+    .contentInner .items.item4 .eachItem .item {
+        height:auto;
+    }
+    .contentInner .items h3 {
+        font-size:15px;
+    }
+
+    .item.lists,
+    .item.tables {
+        display: block;
+        gap:0;
+    }
+    .tableCommon {
+        margin-bottom: 20px;
+    }
+    .item.lists {
+        padding:10px;
+    }
+    .listCommon {
+        margin: 10px 0;
+    }
+    .listCommon h4 {
+        font-size:17px;
+    }
+
+    .listCommon li *,
+    .listCommon li {
+        font-size:14px !important;
+    }
+    .tableCommon.over {
+        width: 500px;
+        overflow: auto;
+    }
+    .tabBtn button {
+        min-width:auto;
+        font-size:12px;
+        width:50%;
+        padding:0 5px;
+        word-break: keep-all;
+    }
+    .tabContent {
+        padding:0 15px;
+    }
+
+    .listCommon.type2 {
+        padding:0;
+    }
+    
+    .listCommon.type2 li span:nth-child(1) {
+        display: block;
+        min-width:auto;
+    }
+    .listCommon.type2 li span:nth-child(1):after {
+        content:'';
+    }
+}
